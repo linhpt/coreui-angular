@@ -3,7 +3,7 @@ import { Component, HostBinding, HostListener, Input } from '@angular/core';
 import { AppSidebarService } from './app-sidebar.service';
 
 @Component({
-  selector: 'app-sidebar-minimizer, cui-sidebar-minimizer',
+  selector: 'app-sidebar-minimizer',
   template: ``
 })
 export class AppSidebarMinimizerComponent {

@@ -2,7 +2,7 @@ import { Component, HostBinding, Inject, Input, OnDestroy, OnInit, Renderer2 } f
 import { DOCUMENT } from '@angular/common';
 
 @Component({
-  selector: 'app-header, cui-header',
+  selector: 'app-header',
   templateUrl: './app-header.component.html'
 })
 export class AppHeaderComponent implements OnInit, OnDestroy {

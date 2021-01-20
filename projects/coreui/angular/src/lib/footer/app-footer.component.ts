@@ -2,7 +2,7 @@ import { Component, HostBinding, Inject, Input, OnDestroy, OnInit, Renderer2 } f
 import { DOCUMENT } from '@angular/common';
 
 @Component({
-  selector: 'app-footer, cui-footer',
+  selector: 'app-footer',
   template: `<ng-content></ng-content>`
 })
 export class AppFooterComponent implements OnInit, OnDestroy {

@@ -1,7 +1,7 @@
 import { Component, HostBinding } from '@angular/core';
 
 @Component({
-  selector: 'app-sidebar-header, cui-sidebar-header',
+  selector: 'app-sidebar-header',
   template: `
     <ng-content></ng-content>`
 })

@@ -1,7 +1,7 @@
 import { Component, HostBinding } from '@angular/core';
 
 @Component({
-  selector: 'app-sidebar-footer, cui-sidebar-footer',
+  selector: 'app-sidebar-footer',
   template: `
     <ng-content></ng-content>`
 })

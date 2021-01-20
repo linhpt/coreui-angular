@@ -7,7 +7,7 @@ import { SidebarNavHelper } from '../app-sidebar-nav.service';
 import { INavData } from '../app-sidebar-nav';
 
 @Component({
-  selector: 'app-sidebar-nav-link-content, cui-sidebar-nav-link-content',
+  selector: 'app-sidebar-nav-link-content',
   template: `
     <ng-container *ngIf="true">
       <i *ngIf="helper.hasIcon(item)" [ngClass]="item | appSidebarNavIcon"></i>

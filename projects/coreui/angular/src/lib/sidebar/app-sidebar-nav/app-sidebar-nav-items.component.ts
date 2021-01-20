@@ -6,7 +6,7 @@ import { SidebarNavHelper } from '../app-sidebar-nav.service';
 import { INavData } from '../app-sidebar-nav';
 
 @Component({
-  selector: 'app-sidebar-nav-items, cui-sidebar-nav-items',
+  selector: 'app-sidebar-nav-items',
   template: `
     <ng-container *ngFor="let item of items">
       <ng-container [ngSwitch]="helper.itemType(item)">

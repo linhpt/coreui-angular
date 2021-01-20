@@ -4,7 +4,7 @@ import { SidebarNavHelper } from '../app-sidebar-nav.service';
 import { INavData } from '../app-sidebar-nav';
 
 @Component({
-  selector: 'app-sidebar-nav-dropdown, cui-sidebar-nav-dropdown',
+  selector: 'app-sidebar-nav-dropdown',
   template: `
     <a class="nav-link nav-dropdown-toggle"
        appNavDropdownToggle

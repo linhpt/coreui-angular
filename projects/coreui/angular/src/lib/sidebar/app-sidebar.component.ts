@@ -6,7 +6,7 @@ import { sidebarCssClasses } from '../shared';
 import { AppSidebarService } from './app-sidebar.service';
 
 @Component({
-  selector: 'app-sidebar, cui-sidebar',
+  selector: 'app-sidebar',
   template: `
     <ng-content></ng-content>`
 })

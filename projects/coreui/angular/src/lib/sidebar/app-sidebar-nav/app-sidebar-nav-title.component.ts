@@ -2,7 +2,7 @@ import { Component, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
 import { INavData } from '../app-sidebar-nav';
 
 @Component({
-  selector: 'app-sidebar-nav-title, cui-sidebar-nav-title',
+  selector: 'app-sidebar-nav-title',
   template: '',
 })
 export class AppSidebarNavTitleComponent implements OnInit {

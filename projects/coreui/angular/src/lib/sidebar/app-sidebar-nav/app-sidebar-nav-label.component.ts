@@ -3,7 +3,7 @@ import { SidebarNavHelper } from '../app-sidebar-nav.service';
 import { INavData } from '../app-sidebar-nav';
 
 @Component({
-  selector: 'app-sidebar-nav-label, cui-sidebar-nav-label',
+  selector: 'app-sidebar-nav-label',
   templateUrl: './app-sidebar-nav-label.component.html'
 })
 export class AppSidebarNavLabelComponent implements OnInit {
