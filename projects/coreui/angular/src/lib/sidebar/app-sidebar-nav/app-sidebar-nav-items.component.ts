@@ -18,12 +18,6 @@ import { INavData } from '../app-sidebar-nav';
           appNavDropdown
           routerLinkActive="open">
         </app-sidebar-nav-dropdown>
-        <app-sidebar-nav-divider
-          *ngSwitchCase="'divider'"
-          [item]="item"
-          [ngClass]="item | appSidebarNavItemClass"
-          [appHtmlAttr]="item.attributes">
-        </app-sidebar-nav-divider>
         <app-sidebar-nav-title
           *ngSwitchCase="'title'"
           [item]="item"

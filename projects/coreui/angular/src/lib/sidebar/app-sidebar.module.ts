@@ -5,15 +5,12 @@ import { RouterModule } from '@angular/router';
 import { LayoutModule } from '../shared/layout';
 // App Sidebar Component
 import { AppSidebarComponent } from './app-sidebar.component';
-import { AppSidebarFooterComponent } from './app-sidebar-footer.component';
-import { AppSidebarFormComponent } from './app-sidebar-form.component';
 import { AppSidebarHeaderComponent } from './app-sidebar-header.component';
-import { AppSidebarMinimizerComponent } from './app-sidebar-minimizer.component';
+
 import { AppSidebarService } from './app-sidebar.service';
 // App SidebarNav Component
 import { NavDropdownDirective, NavDropdownToggleDirective } from './app-sidebar-nav.directive';
 import { AppSidebarNavComponent } from './app-sidebar-nav.component';
-import { AppSidebarNavDividerComponent } from './app-sidebar-nav/app-sidebar-nav-divider.component';
 import { AppSidebarNavDropdownComponent } from './app-sidebar-nav/app-sidebar-nav-dropdown.component';
 import { AppSidebarNavItemsComponent } from './app-sidebar-nav/app-sidebar-nav-items.component';
 import { AppSidebarNavLinkComponent, AppSidebarNavLinkContentComponent } from './app-sidebar-nav/app-sidebar-nav-link.component';
@@ -32,14 +29,10 @@ import { AppSidebarNavItemClassPipe } from './app-sidebar-nav/app-sidebar-nav-it
     LayoutModule
   ],
   exports: [
-    AppSidebarFooterComponent,
-    AppSidebarFormComponent,
     AppSidebarHeaderComponent,
-    AppSidebarMinimizerComponent,
     AppSidebarComponent,
     AppSidebarNavItemsComponent,
     AppSidebarNavComponent,
-    AppSidebarNavDividerComponent,
     AppSidebarNavDropdownComponent,
     AppSidebarNavLabelComponent,
     AppSidebarNavLinkComponent,
@@ -50,15 +43,10 @@ import { AppSidebarNavItemClassPipe } from './app-sidebar-nav/app-sidebar-nav-it
     LayoutModule
   ],
   declarations: [
-    AppSidebarFooterComponent,
-    AppSidebarFormComponent,
     AppSidebarHeaderComponent,
-    AppSidebarMinimizerComponent,
-    AppSidebarMinimizerComponent,
     AppSidebarComponent,
     AppSidebarNavItemsComponent,
     AppSidebarNavComponent,
-    AppSidebarNavDividerComponent,
     AppSidebarNavDropdownComponent,
     AppSidebarNavLinkComponent,
     AppSidebarNavLinkContentComponent,
