@@ -1,12 +1,14 @@
-import {Component, HostBinding} from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar-footer, cui-sidebar-footer',
-  template: `<ng-content></ng-content>`
+  template: `
+    <ng-content></ng-content>`
 })
 export class AppSidebarFooterComponent {
 
   @HostBinding('class.sidebar-footer') sidebarFooterClass = true;
 
-  constructor() { }
+  constructor() {
+  }
 }

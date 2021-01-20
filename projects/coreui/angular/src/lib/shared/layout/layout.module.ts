@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import {
   AsideToggleDirective,
   BrandMinimizeDirective,
+  HtmlAttributesDirective,
   MobileSidebarToggleDirective,
-  SidebarToggleDirective,
   SidebarMinimizeDirective,
   SidebarOffCanvasCloseDirective,
-  HtmlAttributesDirective
+  SidebarToggleDirective
 } from './layout.directive';
 import { ClassToggler } from '../toggle-classes';
 

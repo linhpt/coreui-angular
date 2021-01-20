@@ -1,10 +1,10 @@
-import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
-import {NavigationEnd, Router} from '@angular/router';
-import {Observable, Subscription} from 'rxjs';
-import {filter} from 'rxjs/operators';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { Observable, Subscription } from 'rxjs';
+import { filter } from 'rxjs/operators';
 
-import {SidebarNavHelper} from '../app-sidebar-nav.service';
-import {INavData} from '../app-sidebar-nav';
+import { SidebarNavHelper } from '../app-sidebar-nav.service';
+import { INavData } from '../app-sidebar-nav';
 
 @Component({
   selector: 'app-sidebar-nav-link-content, cui-sidebar-nav-link-content',
@@ -15,23 +15,27 @@ import {INavData} from '../app-sidebar-nav';
       <span *ngIf="helper.hasBadge(item)" [ngClass]="item | appSidebarNavBadge">{{ item.badge.text }}</span>
     </ng-container>
   `,
-  providers: [ SidebarNavHelper ]
+  providers: [SidebarNavHelper]
 })
 export class AppSidebarNavLinkContentComponent implements OnInit, OnDestroy {
   @Input() item: INavData;
 
   constructor(
     public helper: SidebarNavHelper
-  ) { }
+  ) {
+  }
 
-  ngOnInit() {}
-  ngOnDestroy() {}
+  ngOnInit() {
+  }
+
+  ngOnDestroy() {
+  }
 }
 
 @Component({
   selector: 'app-sidebar-nav-link, cui-sidebar-nav-link',
   templateUrl: './app-sidebar-nav-link.component.html',
-  providers: [ SidebarNavHelper ]
+  providers: [SidebarNavHelper]
 })
 export class AppSidebarNavLinkComponent implements OnInit, OnDestroy {
 
@@ -41,6 +45,7 @@ export class AppSidebarNavLinkComponent implements OnInit, OnDestroy {
   set item(item: INavData) {
     this._Item = JSON.parse(JSON.stringify(item));
   }
+
   get item(): INavData {
     return this._Item;
   }
@@ -66,7 +71,7 @@ export class AppSidebarNavLinkComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.url = typeof this.item.url === 'string' ? this.item.url : this.router.serializeUrl(this.router.createUrlTree(this.item.url)) ;
+    this.url = typeof this.item.url === 'string' ? this.item.url : this.router.serializeUrl(this.router.createUrlTree(this.item.url));
     this.linkType = this.getLinkType();
     this.href = this.isDisabled() ? '' : (this.item.href || this.url);
     this.linkActive = this.router.url.split(/[?#(;]/)[0] === this.href.split(/[?#(;]/)[0];

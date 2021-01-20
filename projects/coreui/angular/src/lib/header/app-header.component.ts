@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, OnDestroy, Inject, Renderer2, HostBinding} from '@angular/core';
+import { Component, HostBinding, Inject, Input, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
 @Component({

@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {SidebarNavHelper} from '../app-sidebar-nav.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { SidebarNavHelper } from '../app-sidebar-nav.service';
 import { INavData } from '../app-sidebar-nav';
 
 @Component({
@@ -17,7 +17,8 @@ export class AppSidebarNavLabelComponent implements OnInit {
 
   constructor(
     public helper: SidebarNavHelper
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
     this.iconClasses = this.helper.getIconClass(this.item);
@@ -28,6 +29,7 @@ export class AppSidebarNavLabelComponent implements OnInit {
     this.classes[itemClass] = !!itemClass;
     return this.classes;
   }
+
   getLabelIconClass() {
     const variant = `text-${this.item.label.variant}`;
     this.iconClasses[variant] = !!this.item.label.variant;

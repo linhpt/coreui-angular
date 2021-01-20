@@ -1,6 +1,6 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-import {SidebarNavHelper} from '../app-sidebar-nav.service';
+import { SidebarNavHelper } from '../app-sidebar-nav.service';
 import { INavData } from '../app-sidebar-nav';
 
 @Component({

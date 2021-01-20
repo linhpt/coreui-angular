@@ -7,7 +7,8 @@ import { AppSidebarService } from './app-sidebar.service';
 
 @Component({
   selector: 'app-sidebar, cui-sidebar',
-  template: `<ng-content></ng-content>`
+  template: `
+    <ng-content></ng-content>`
 })
 export class AppSidebarComponent implements OnInit, OnDestroy {
 
@@ -23,13 +24,14 @@ export class AppSidebarComponent implements OnInit, OnDestroy {
   get minimized() {
     return this._minimized;
   }
+
   set minimized(value: boolean) {
     // only update / emit events when the value changes
     if (this._minimized !== value) {
       this._minimized = value;
       this._updateMinimized(value);
       this.minimizedChange.emit(value);
-      this.sidebarService.toggle({ minimize: value } );
+      this.sidebarService.toggle({minimize: value});
     }
   }
 
@@ -45,14 +47,15 @@ export class AppSidebarComponent implements OnInit, OnDestroy {
     @Inject(DOCUMENT) private document: any,
     private renderer: Renderer2,
     private sidebarService: AppSidebarService
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
     this.displayBreakpoint(this.display);
     this.isCompact(this.compact);
     this.isFixed(this.fixed);
     this.isOffCanvas(this.offCanvas);
-    this.sidebarService.toggle({ minimize: this.minimized } );
+    this.sidebarService.toggle({minimize: this.minimized});
     this.subscriptionEvents = this.sidebarService.events$.subscribe(action => {
       if (action.minimize !== undefined) {
         action.minimize === 'toggle' ? this.toggleMinimized() : this.minimized = !!action.minimize;

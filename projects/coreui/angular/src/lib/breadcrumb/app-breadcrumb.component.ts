@@ -1,13 +1,13 @@
-import {Component, ElementRef, Inject, Input, OnDestroy, OnInit, Renderer2} from '@angular/core';
-import {DOCUMENT} from '@angular/common';
+import { Component, ElementRef, Inject, Input, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
-import {AppBreadcrumbService} from './app-breadcrumb.service';
-import {Replace} from '../shared';
+import { AppBreadcrumbService } from './app-breadcrumb.service';
+import { Replace } from '../shared';
 
 @Component({
   selector: 'app-breadcrumb',
   template: `
-    <ng-template ngFor let-breadcrumb [ngForOf]="breadcrumbs | async" let-last = last>
+    <ng-template ngFor let-breadcrumb [ngForOf]="breadcrumbs | async" let-last=last>
       <li class="breadcrumb-item"
           *ngIf="breadcrumb.label.title && (breadcrumb.url.slice(-1) == '/' || last)"
           [ngClass]="{active: last}">
@@ -27,7 +27,8 @@ export class AppBreadcrumbComponent implements OnInit, OnDestroy {
     private renderer: Renderer2,
     public service: AppBreadcrumbService,
     public el: ElementRef
-  ) { }
+  ) {
+  }
 
   public ngOnInit(): void {
     Replace(this.el);

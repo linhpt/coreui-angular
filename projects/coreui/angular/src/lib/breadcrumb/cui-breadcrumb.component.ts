@@ -1,7 +1,7 @@
-import {Component, ElementRef, Inject, Input, OnDestroy, OnInit, Renderer2} from '@angular/core';
-import {DOCUMENT} from '@angular/common';
+import { Component, Inject, Input, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
-import {AppBreadcrumbService} from './app-breadcrumb.service';
+import { AppBreadcrumbService } from './app-breadcrumb.service';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -18,7 +18,8 @@ export class CuiBreadcrumbComponent implements OnInit, OnDestroy {
     @Inject(DOCUMENT) private document: any,
     private renderer: Renderer2,
     public service: AppBreadcrumbService,
-  ) { }
+  ) {
+  }
 
   public ngOnInit(): void {
     this.isFixed(this.fixed);

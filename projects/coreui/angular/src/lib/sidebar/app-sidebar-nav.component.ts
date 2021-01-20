@@ -17,7 +17,8 @@ export class AppSidebarNavComponent implements OnChanges {
 
   constructor(
     public router: Router,
-  ) { }
+  ) {
+  }
 
   public ngOnChanges(changes: SimpleChanges): void {
     this.navItemsArray = Array.isArray(this.navItems) ? this.navItems.slice() : [];

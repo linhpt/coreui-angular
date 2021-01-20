@@ -19,14 +19,14 @@ export interface INavLabel {
 }
 
 export interface INavLinkProps {
-  queryParams?: {[k: string]: any};
+  queryParams?: { [k: string]: any };
   fragment?: string;
   queryParamsHandling?: 'merge' | 'preserve' | '';
   preserveFragment?: boolean;
   skipLocationChange?: boolean;
   replaceUrl?: boolean;
-  state?: {[k: string]: any};
-  routerLinkActiveOptions?: {exact: boolean};
+  state?: { [k: string]: any };
+  routerLinkActiveOptions?: { exact: boolean };
   routerLinkActive?: string | string[];
 }
 

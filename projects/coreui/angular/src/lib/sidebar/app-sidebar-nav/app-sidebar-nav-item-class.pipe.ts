@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-import {SidebarNavHelper} from '../app-sidebar-nav.service';
+import { SidebarNavHelper } from '../app-sidebar-nav.service';
 
 @Pipe({
   name: 'appSidebarNavItemClass'

@@ -7,7 +7,7 @@ export class AppSidebarNavLinkPipe implements PipeTransform {
 
   transform(item: any): any {
 
-    const classes = { 'nav-link': true };
+    const classes = {'nav-link': true};
 
     const disabled = item.attributes && item.attributes.disabled;
     classes['disabled'] = disabled;

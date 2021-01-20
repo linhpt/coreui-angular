@@ -1,4 +1,4 @@
-import {Component, HostBinding, HostListener, Input} from '@angular/core';
+import { Component, HostBinding, HostListener, Input } from '@angular/core';
 
 import { AppSidebarService } from './app-sidebar.service';
 
@@ -19,5 +19,6 @@ export class AppSidebarMinimizerComponent {
 
   constructor(
     private sidebarService: AppSidebarService
-  ) { }
+  ) {
+  }
 }

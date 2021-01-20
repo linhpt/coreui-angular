@@ -1,9 +1,9 @@
-import {Component, Inject, Input, Renderer2} from '@angular/core';
-import {Router} from '@angular/router';
-import {DOCUMENT} from '@angular/common';
+import { Component, Inject, Input, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
 
-import {SidebarNavHelper} from '../app-sidebar-nav.service';
-import {INavData} from '../app-sidebar-nav';
+import { SidebarNavHelper } from '../app-sidebar-nav.service';
+import { INavData } from '../app-sidebar-nav';
 
 @Component({
   selector: 'app-sidebar-nav-items, cui-sidebar-nav-items',
@@ -59,6 +59,7 @@ export class AppSidebarNavItemsComponent {
   set items(items: INavData[]) {
     this._items = [...items];
   }
+
   get items(): INavData[] {
     return this._items;
   }
@@ -68,7 +69,8 @@ export class AppSidebarNavItemsComponent {
     private renderer: Renderer2,
     public router: Router,
     public helper: SidebarNavHelper
-  ) {}
+  ) {
+  }
 
   public hideMobile() {
     if (this.document.body.classList.contains('sidebar-show')) {
